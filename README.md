@@ -3,7 +3,7 @@
   <p><em>Spring Boot REST API for managing users with Docker and Swagger integration</em></p>
 </div>
 
----
+<br>
 
 ## 🚀 Основные фичи
 
@@ -14,7 +14,7 @@
 * 🧪 Интеграционные тесты с использованием Spring Boot Test и MockMvc
 * 🧾 Логгирование на уровне сервисов и контроллеров
 
----
+<br>
 
 ## 📦 Быстрый старт
 
@@ -31,7 +31,7 @@ cp docker/.env.example docker/.env
 docker-compose -f docker/docker-compose.yaml up --build
 ```
 
----
+<br>
 
 ## 📚 Документация API
 
@@ -41,7 +41,7 @@ docker-compose -f docker/docker-compose.yaml up --build
 http://localhost:8080/swagger-ui.html
 ```
 
----
+<br>
 
 ## 📁 Структура
 
@@ -52,7 +52,7 @@ http://localhost:8080/swagger-ui.html
 * `dto/` - запросы и ответы API
 * `config/` - конфигурация (Swagger, ModelMapper и пр.)
 
----
+<br>
 
 ## 🧪 Тесты
 
@@ -60,7 +60,7 @@ http://localhost:8080/swagger-ui.html
 ./gradlew test
 ```
 
----
+<br>
 
 <div align="center">
   <sub>Made with ❤️ by <a href="https://github.com/glebpav">hlebnoe_pole</a></sub>
