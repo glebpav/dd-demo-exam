@@ -18,6 +18,10 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
 
+    private UserResponse convertToResponse(User user) {
+        return modelMapper.map(user, UserResponse.class);
+    }
+
     @Override
     public List<UserResponse> getAllUsers() {
         return userRepository.findAll().stream()
@@ -27,7 +31,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserResponse createUser(UserRequest request) {
-        User user = modelMapper.map(request, User.class);
+        var user = modelMapper.map(request, User.class);
         return convertToResponse(userRepository.save(user));
     }
 
@@ -37,10 +41,6 @@ public class UserServiceImpl implements UserService {
                 .stream()
                 .map(this::convertToResponse)
                 .toList();
-    }
-
-    private UserResponse convertToResponse(User user) {
-        return modelMapper.map(user, UserResponse.class);
     }
 
 }
